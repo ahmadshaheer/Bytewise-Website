@@ -5783,6 +5783,18 @@ a.neo-cap-card:focus-visible {
   padding: 1.6rem;
 }
 
+.neo-contact-panel .neo-section__copy a {
+  color: var(--neo-pill-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.neo-contact-panel .neo-section__copy a:hover,
+.neo-contact-panel .neo-section__copy a:focus-visible {
+  color: var(--neo-ink);
+  text-decoration: underline;
+}
+
 .neo-contact-card {
   min-height: 100%;
   padding: 1rem;
@@ -7751,8 +7763,15 @@ a.neo-cap-card:focus-visible {
     0 0 0 1px rgba(103, 239, 87, 0.06);
 }
 
-[data-bs-theme="dark"] .neo-service-card,
-[data-bs-theme="dark"] .neo-contact-card,
+[data-bs-theme="dark"] .neo-contact-panel .neo-section__copy a {
+  color: var(--neo-pill-text);
+}
+
+[data-bs-theme="dark"] .neo-contact-panel .neo-section__copy a:hover,
+[data-bs-theme="dark"] .neo-contact-panel .neo-section__copy a:focus-visible {
+  color: var(--neo-ink);
+}
+
 [data-bs-theme="dark"] .neo-contact-panel,
 [data-bs-theme="dark"] .neo-faq {
   background: linear-gradient(180deg, var(--card-bg-elevated), var(--card-bg));
