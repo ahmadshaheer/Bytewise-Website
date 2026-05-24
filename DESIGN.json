@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-24T00:00:00.000Z",
+  "title": "Design System: Bytewise Technologies",
+  "extensions": {
+    "colorMeta": {
+      "arctic-bg": {
+        "role": "neutral",
+        "displayName": "Arctic Field",
+        "canonical": "oklch(97% 0.012 145)",
+        "tonalRamp": [
+          "oklch(22% 0.02 145)",
+          "oklch(32% 0.025 145)",
+          "oklch(42% 0.03 145)",
+          "oklch(52% 0.035 145)",
+          "oklch(62% 0.04 145)",
+          "oklch(72% 0.045 145)",
+          "oklch(82% 0.05 145)",
+          "oklch(97% 0.012 145)"
+        ]
+      },
+      "navy": {
+        "role": "primary",
+        "displayName": "Procurement Navy",
+        "canonical": "oklch(28% 0.06 250)",
+        "tonalRamp": [
+          "oklch(18% 0.05 250)",
+          "oklch(24% 0.055 250)",
+          "oklch(28% 0.06 250)",
+          "oklch(34% 0.065 250)",
+          "oklch(42% 0.07 250)",
+          "oklch(52% 0.06 250)",
+          "oklch(65% 0.04 250)",
+          "oklch(92% 0.015 250)"
+        ]
+      },
+      "forest-green": {
+        "role": "primary",
+        "displayName": "Forest Signal Green",
+        "canonical": "oklch(52% 0.14 155)",
+        "tonalRamp": [
+          "oklch(22% 0.08 155)",
+          "oklch(32% 0.1 155)",
+          "oklch(42% 0.12 155)",
+          "oklch(52% 0.14 155)",
+          "oklch(62% 0.16 155)",
+          "oklch(72% 0.18 155)",
+          "oklch(82% 0.14 155)",
+          "oklch(94% 0.06 155)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(28% 0.04 250)",
+        "tonalRamp": [
+          "oklch(18% 0.035 250)",
+          "oklch(24% 0.038 250)",
+          "oklch(28% 0.04 250)",
+          "oklch(38% 0.035 250)",
+          "oklch(48% 0.03 250)",
+          "oklch(58% 0.025 250)",
+          "oklch(72% 0.02 250)",
+          "oklch(92% 0.01 250)"
+        ]
+      },
+      "signal-lime": {
+        "role": "secondary",
+        "displayName": "Signal Lime",
+        "canonical": "oklch(88% 0.22 130)",
+        "tonalRamp": [
+          "oklch(35% 0.12 130)",
+          "oklch(45% 0.15 130)",
+          "oklch(55% 0.18 130)",
+          "oklch(65% 0.2 130)",
+          "oklch(75% 0.21 130)",
+          "oklch(82% 0.22 130)",
+          "oklch(88% 0.22 130)",
+          "oklch(96% 0.1 130)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Capability showcase and major neo section headers. Syne, tight tracking."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Home hero H1. Public Sans, short line length."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, service copy, descriptions. Public Sans, 1.8 line-height."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Pills, badges, uppercase CTAs. Space Mono or Public Sans uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-sm",
+        "value": "0 18px 36px rgba(16, 36, 63, 0.06)",
+        "purpose": "Default card and surface rest shadow."
+      },
+      {
+        "name": "ambient-md",
+        "value": "0 28px 56px rgba(16, 36, 63, 0.08)",
+        "purpose": "Floating contact and elevated panels."
+      },
+      {
+        "name": "cta-lift",
+        "value": "0 14px 34px rgba(21, 145, 84, 0.2)",
+        "purpose": "Primary neo button rest state."
+      },
+      {
+        "name": "glass-inset",
+        "value": "inset 0 1px 0 rgba(255, 255, 255, 0.7)",
+        "purpose": "Top highlight on glass panels."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "180ms ease",
+        "purpose": "Nav links, buttons, form focus."
+      },
+      {
+        "name": "ease-reveal",
+        "value": "680ms ease",
+        "purpose": "Scroll reveal opacity and transform."
+      },
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Capability card 3D reveal."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "576px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "992px" },
+      { "name": "xl", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA on neo pages. Forest-to-lime gradient, uppercase.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Explore Services</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(21, 145, 84, 0.1); border-radius: 0.85rem; padding: 0.95rem 1.45rem; background: linear-gradient(135deg, #159154, #9bf53b); color: #ffffff; font-family: \"Public Sans\", sans-serif; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; box-shadow: 0 14px 34px rgba(21, 145, 84, 0.2); transition: background 180ms ease, border-color 180ms ease; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { outline: none; border-color: rgba(21, 145, 84, 0.16); background: linear-gradient(135deg, #117844, #57da52); color: #ffffff; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA. Frosted white with green text.",
+      "html": "<button class=\"ds-btn-outline\" type=\"button\">View Projects</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(21, 145, 84, 0.12); border-radius: 0.85rem; padding: 0.95rem 1.45rem; background: rgba(255, 255, 255, 0.7); color: #147a47; font-family: \"Public Sans\", sans-serif; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background 180ms ease, border-color 180ms ease; } .ds-btn-outline:hover, .ds-btn-outline:focus-visible { outline: none; border-color: rgba(21, 145, 84, 0.18); background: rgba(255, 255, 255, 0.88); color: #0f6338; }"
+    },
+    {
+      "name": "Status Pill",
+      "kind": "chip",
+      "refersTo": "pill-badge",
+      "description": "Hero and section eyebrow pills with live dot.",
+      "html": "<span class=\"ds-pill\"><span class=\"ds-pill__dot\"></span>ICT Solutions</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.78rem 1rem; border-radius: 999px; background: rgba(255, 255, 255, 0.68); border: 1px solid rgba(255, 255, 255, 0.5); color: #147a47; font-family: \"Public Sans\", sans-serif; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; box-shadow: 0 10px 24px rgba(0, 43, 107, 0.05); } .ds-pill__dot { width: 0.55rem; height: 0.55rem; border-radius: 999px; background: linear-gradient(135deg, #159154, #67ef57); box-shadow: 0 0 0 0.35rem rgba(21, 145, 84, 0.1); }"
+    },
+    {
+      "name": "Glass Panel",
+      "kind": "card",
+      "refersTo": "glass-panel",
+      "description": "Hero visual shell and elevated frosted containers.",
+      "html": "<div class=\"ds-glass-panel\"><p class=\"ds-glass-panel__copy\">Plan, build, and roll out systems with clarity.</p></div>",
+      "css": ".ds-glass-panel { padding: 1.5rem; border-radius: 2rem; background: rgba(255, 255, 255, 0.64); border: 1px solid rgba(255, 255, 255, 0.42); box-shadow: 0 10px 36px rgba(0, 43, 107, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); } .ds-glass-panel__copy { margin: 0; color: #627594; font-family: \"Public Sans\", sans-serif; font-size: 0.98rem; line-height: 1.8; }"
+    },
+    {
+      "name": "Site Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Primary nav with gradient underline on hover/active.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__link ds-nav__link--active\" href=\"#\">Services</a><a class=\"ds-nav__link\" href=\"#\">Projects</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 0.5rem; font-family: \"Public Sans\", sans-serif; } .ds-nav__link { position: relative; color: #5f7088; font-size: 0.94rem; font-weight: 700; padding: 0.8rem 0.95rem; text-decoration: none; transition: color 180ms ease; } .ds-nav__link::after { content: \"\"; position: absolute; left: 0.95rem; right: 0.95rem; bottom: 0.45rem; height: 2px; background: linear-gradient(90deg, #159154, #b98b37); transform: scaleX(0); transform-origin: center; transition: transform 180ms ease; } .ds-nav__link:hover, .ds-nav__link--active { color: #11243f; } .ds-nav__link:hover::after, .ds-nav__link--active::after { transform: scaleX(1); }"
+    },
+    {
+      "name": "Capability Card",
+      "kind": "card",
+      "refersTo": "glass-panel",
+      "description": "Neo capabilities grid card with glass fill and green accent.",
+      "html": "<article class=\"ds-cap-card\"><span class=\"ds-cap-card__label\">01</span><h3 class=\"ds-cap-card__title\">Software Development</h3><p class=\"ds-cap-card__copy\">Custom applications built for operational clarity.</p></article>",
+      "css": ".ds-cap-card { padding: 1.45rem; border-radius: 1.6rem; background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.7)); border: 1px solid rgba(255, 255, 255, 0.62); box-shadow: 0 16px 38px rgba(21, 145, 84, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.62); backdrop-filter: blur(8px) saturate(1.08); -webkit-backdrop-filter: blur(8px) saturate(1.08); } .ds-cap-card__label { display: block; margin-bottom: 0.75rem; color: #147a47; font-family: \"Space Mono\", monospace; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; } .ds-cap-card__title { margin: 0 0 0.5rem; color: #11213e; font-family: \"Syne\", \"Plus Jakarta Sans\", sans-serif; font-size: 1.25rem; font-weight: 700; line-height: 1.2; } .ds-cap-card__copy { margin: 0; color: #5c6f90; font-family: \"Public Sans\", sans-serif; font-size: 0.95rem; line-height: 1.7; } .ds-cap-card:hover { box-shadow: 0 20px 44px rgba(21, 145, 84, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.62); transition: box-shadow 220ms ease; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Institutional Edge",
+    "overview": "Bytewise reads as a firm that can pass a procurement review and still feel technically current. The visual system pairs an arctic mint light field with deep navy structure and forest-green signal accents. Surfaces are layered rather than flat: soft ambient shadows at rest, selective glass blur on hero and float elements, and motion that supports credibility rather than spectacle.",
+    "keyCharacteristics": [
+      "Light, arctic mint atmosphere with navy typography anchors",
+      "Forest-green gradient CTAs with uppercase, tactile confidence",
+      "Serif and geometric sans pairing for institutional + modern tension",
+      "Layered glass and soft shadows on hero/float surfaces only",
+      "Scroll-driven reveals with full prefers-reduced-motion respect",
+      "Procurement-safe clarity: readable copy, structured sections, no visual noise"
+    ],
+    "rules": [
+      {
+        "name": "The Signal Rarity Rule",
+        "body": "Forest green gradients appear on primary CTAs, pills, and accent lines only. If green covers more than roughly 15% of a viewport, the page is too loud for institutional credibility.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Neon Rule",
+        "body": "Signal lime exists inside controlled gradients. Never use it as a flat background, glow, or text color on its own.",
+        "section": "colors"
+      },
+      {
+        "name": "The Uppercase CTA Rule",
+        "body": "Primary and outline buttons use uppercase, 0.82rem, weight 800, and wide letter-spacing (0.16em). This is intentional tactile confidence; do not lowercase CTAs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glass-on-Hero Rule",
+        "body": "Backdrop blur is allowed on hero visuals, float cards, and the floating contact button. Do not apply glassmorphism to every card in a grid.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are tonal at rest. Shadows escalate on hover or on floating/hero elements, not on every static content block.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the arctic mint + navy + forest green token set from :root and neo overrides.",
+      "Do keep hero copy max-width around 39rem and hero titles tight (~12ch) for scanability.",
+      "Do use uppercase, letter-spaced CTAs with gradient primary fills on neo pages.",
+      "Do respect prefers-reduced-motion: reduce by disabling orb, grid, float, and reveal animations.",
+      "Do layer depth with soft navy shadows and selective glass on hero/float surfaces only.",
+      "Do write specific, concrete section copy suitable for gov/NGO procurement reviewers."
+    ],
+    "donts": [
+      "Don't look like a cheap template or stock-photo agency site.",
+      "Don't use startup hype: buzzword stacking, neon accents, or decorative motion without informational value.",
+      "Don't apply glassmorphism as a default on every card or section.",
+      "Don't use side-stripe borders (colored border-left/right > 1px) on cards or callouts.",
+      "Don't expand gradient text (background-clip: text) to new components.",
+      "Don't use pure #000 or #fff on large surfaces; tint neutrals toward mint/navy.",
+      "Don't animate layout properties (width, height, margin); use opacity and transform only."
+    ]
+  }
+}

@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bytewise Technologies | Home</title>
+    <meta
+      name="description"
+      content="Bytewise Technologies provides software development, ERP systems, cloud and enterprise infrastructure, and strategic IT consulting for corporations, NGOs, and government institutions."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t !== "dark" && t !== "light") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-bs-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home" class="home-page home-page--neo">
+    <div class="site-shell">
+      <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-xxl neo-nav-wrap">
+            <a href="index.html" class="brand-link navbar-brand p-0 m-0">
+              <span class="brand-mark brand-mark--image">
+                <img
+                  src="assets/bytewise-logo.png"
+                  alt="Bytewise Technologies logo"
+                />
+              </span>
+              <span>
+                <span class="brand-name">Bytewise Technologies</span>
+                <span class="brand-tagline d-block"
+                  >Software, ERP, Infrastructure &amp; IT Consulting</span
+                >
+              </span>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#siteNav"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul
+                class="navbar-nav mx-auto align-items-xl-center gap-xl-2 site-nav"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="services.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="services.html"
+                        >All Services</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="business.html">Business</a>
+                    </li>
+                    <li><a class="dropdown-item" href="ngo.html">NGOs</a></li>
+                    <li>
+                      <a class="dropdown-item" href="government.html"
+                        >Government</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+              </ul>
+              <div class="header-actions">
+                <button
+                  type="button"
+                  class="theme-toggle"
+                  id="theme-toggle"
+                  aria-label="Switch to dark mode"
+                  aria-pressed="false"
+                >
+                  <svg
+                    class="theme-toggle__icon theme-toggle__icon--sun"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                      d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                    />
+                  </svg>
+                  <svg
+                    class="theme-toggle__icon theme-toggle__icon--moon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                    />
+                  </svg>
+                </button>
+                <a href="contact.html" class="btn btn-brand neo-header-cta"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <a
+        href="mailto:info@bytewiseict.com"
+        class="neo-floating-contact d-none d-lg-inline-flex"
+        >Email Us</a
+      >
+
+      <main class="neo-home">
+        <section class="neo-hero">
+          <div class="container-xxl position-relative">
+            <div class="neo-orb neo-orb--one"></div>
+            <div class="neo-orb neo-orb--two"></div>
+            <div class="neo-tech-web" aria-hidden="true">
+              <span class="neo-tech-web__grid"></span>
+              <span class="neo-tech-web__line neo-tech-web__line--one"></span>
+              <span class="neo-tech-web__line neo-tech-web__line--two"></span>
+              <span class="neo-tech-web__line neo-tech-web__line--three"></span>
+              <span class="neo-tech-web__line neo-tech-web__line--four"></span>
+              <span class="neo-tech-web__pulse neo-tech-web__pulse--one"></span>
+              <span class="neo-tech-web__pulse neo-tech-web__pulse--two"></span>
+            </div>
+
+            <div class="row g-5 align-items-center">
+              <div class="col-lg-6">
+                <div class="reveal">
+                  <div class="neo-pill">
+                    <span class="neo-pill__dot"></span>
+                    ICT Solutions
+                  </div>
+                  <h1 class="neo-hero__title">
+                    Reliable ICT solutions for growing organizations.
+                  </h1>
+                  <p class="neo-hero__copy">
+                    We help corporations, NGOs, and government bodies build and
+                    support the systems they rely on daily. Our expertise spans
+                    custom software, ERP integration, IT infrastructure, and
+                    strategic consulting.
+                  </p>
+
+                  <div class="neo-hero__actions">
+                    <a href="services.html" class="btn btn-brand"
+                      >Explore Services</a
+                    >
+                    <a href="projects.html" class="btn btn-outline-brand"
+                      >View Projects</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="reveal">
+                  <div class="neo-hero-visual glass-panel">
+                    <div class="neo-hero-visual__halo"></div>
+                    <div class="neo-hero-visual__tech" aria-hidden="true">
+                      <span class="neo-hero-visual__tech-grid"></span>
+                      <span
+                        class="neo-hero-visual__tech-line neo-hero-visual__tech-line--one"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__tech-line neo-hero-visual__tech-line--two"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__tech-line neo-hero-visual__tech-line--three"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__tech-pulse neo-hero-visual__tech-pulse--one"
+                      ></span>
+                    </div>
+                    <div class="neo-hero-visual__ring">
+                      <span
+                        class="neo-hero-visual__dial neo-hero-visual__dial--outer"
+                        aria-hidden="true"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__dial neo-hero-visual__dial--inner"
+                        aria-hidden="true"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__beam neo-hero-visual__beam--one"
+                        aria-hidden="true"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__beam neo-hero-visual__beam--two"
+                        aria-hidden="true"
+                      ></span>
+                      <span
+                        class="neo-hero-visual__core"
+                        aria-hidden="true"
+                      ></span>
+                      <img
+                        src="assets/hero-software.svg"
+                        alt="Software automation and digital product development"
+                        class="neo-hero-visual__image"
+                        data-rotate-images="assets/hero-software.svg|assets/hero-erp.svg|assets/hero-infrastructure.svg"
+                        data-rotate-alts="Software automation and digital product development|ERP planning and business operations review|IT infrastructure and network systems"
+                        data-rotate-topics="Apps,Automation,Flow::Custom software aligned to how your teams work.|ERP,Clarity,Control::ERP systems built for visibility and control.|IT,Networks,Scale::Reliable IT solutions that grow with you."
+                      />
+                    </div>
+
+                    <div
+                      class="neo-float-card neo-float-card--top neo-float-card--linked"
+                    >
+                      <span class="neo-float-card__badge"
+                        >Digital Delivery</span
+                      >
+                      <strong
+                        >Plan, build, and roll out systems with clarity.</strong
+                      >
+                    </div>
+
+                    <div
+                      class="neo-float-card neo-float-card--bottom neo-float-card--dynamic neo-float-card--linked"
+                    >
+                      <div
+                        class="neo-float-card__metrics neo-float-card__metrics--dynamic"
+                      >
+                        <span>Software</span>
+                        <span>ERP</span>
+                        <span>IT</span>
+                      </div>
+                      <p class="neo-float-card__copy">
+                        Custom software aligned to how your teams work.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="neo-section" id="features">
+          <div class="container-xxl">
+            <div class="neo-capabilities-showcase">
+              <div
+                class="neo-capabilities-showcase__grid-bg"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="neo-capabilities-showcase__blob neo-capabilities-showcase__blob--one"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="neo-capabilities-showcase__blob neo-capabilities-showcase__blob--two"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="neo-capabilities-showcase__blob neo-capabilities-showcase__blob--three"
+                aria-hidden="true"
+              ></div>
+
+              <div class="neo-capabilities-showcase__header reveal">
+                <div class="neo-capabilities-showcase__badge">
+                  <span class="neo-capabilities-showcase__badge-dot"></span>
+                  Core Services
+                </div>
+                <h2 class="neo-capabilities-showcase__title">
+                  End-to-End Delivery
+                </h2>
+                <p class="neo-capabilities-showcase__subtitle">
+                  Integrated technology services spanning from custom code to
+                  high-level strategic consulting.
+                </p>
+              </div>
+
+              <div
+                class="neo-capabilities-showcase__cards reveal"
+                data-stagger-children=".neo-cap-card"
+                data-stagger-delay="150"
+              >
+                <a
+                  href="services.html#service-software-development"
+                  class="neo-cap-card neo-cap-card--software tilt-card"
+                  aria-label="Software Development service details"
+                >
+                  <div class="neo-cap-card__shine" aria-hidden="true"></div>
+                  <div class="neo-cap-card__meta">
+                    <div class="neo-cap-card__number">01</div>
+                    <span class="neo-cap-card__layer">Build Layer</span>
+                  </div>
+                  <div class="neo-cap-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </div>
+                  <div class="neo-cap-card__title">Software Development</div>
+                  <p class="neo-cap-card__desc">
+                    Custom web, mobile, and database applications shaped around
+                    real business workflows.
+                  </p>
+                  <div class="neo-cap-card__tags">
+                    <span class="neo-cap-card__tag">Web Apps</span>
+                    <span class="neo-cap-card__tag">Automation</span>
+                  </div>
+                  <div
+                    class="neo-cap-card__bottom-line"
+                    aria-hidden="true"
+                  ></div>
+                </a>
+
+                <a
+                  href="services.html#service-erp-systems"
+                  class="neo-cap-card neo-cap-card--erp tilt-card"
+                  aria-label="ERP Systems service details"
+                >
+                  <div class="neo-cap-card__shine" aria-hidden="true"></div>
+                  <div class="neo-cap-card__meta">
+                    <div class="neo-cap-card__number">02</div>
+                    <span class="neo-cap-card__layer">Control Layer</span>
+                  </div>
+                  <div class="neo-cap-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path>
+                      <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"></path>
+                    </svg>
+                  </div>
+                  <div class="neo-cap-card__title">ERP Systems</div>
+                  <p class="neo-cap-card__desc">
+                    Enterprise platforms that bring finance, operations, and
+                    reporting into one unified view.
+                  </p>
+                  <div class="neo-cap-card__tags">
+                    <span class="neo-cap-card__tag">Operations</span>
+                    <span class="neo-cap-card__tag">Reporting</span>
+                  </div>
+                  <div
+                    class="neo-cap-card__bottom-line"
+                    aria-hidden="true"
+                  ></div>
+                </a>
+
+                <a
+                  href="services.html#service-it-equipment"
+                  class="neo-cap-card neo-cap-card--infrastructure tilt-card"
+                  aria-label="Cloud and Enterprise Infrastructure service details"
+                >
+                  <div class="neo-cap-card__shine" aria-hidden="true"></div>
+                  <div class="neo-cap-card__meta">
+                    <div class="neo-cap-card__number">03</div>
+                    <span class="neo-cap-card__layer">Network Layer</span>
+                  </div>
+                  <div class="neo-cap-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <div class="neo-cap-card__title">
+                    Cloud &amp; Enterprise Infrastructure
+                  </div>
+                  <p class="neo-cap-card__desc">
+                    Secure cloud hosting, on-premise server architecture, and
+                    24/7 managed IT services to keep your operations online and
+                    secure.
+                  </p>
+                  <div class="neo-cap-card__tags">
+                    <span class="neo-cap-card__tag">Cloud Hosting</span>
+                    <span class="neo-cap-card__tag">Managed Services</span>
+                  </div>
+                  <div
+                    class="neo-cap-card__bottom-line"
+                    aria-hidden="true"
+                  ></div>
+                </a>
+
+                <a
+                  href="services.html#service-it-consulting"
+                  class="neo-cap-card neo-cap-card--consulting tilt-card"
+                  aria-label="IT Consulting service details"
+                >
+                  <div class="neo-cap-card__shine" aria-hidden="true"></div>
+                  <div class="neo-cap-card__meta">
+                    <div class="neo-cap-card__number">04</div>
+                    <span class="neo-cap-card__layer">Guidance Layer</span>
+                  </div>
+                  <div class="neo-cap-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                  </div>
+                  <div class="neo-cap-card__title">IT Consulting</div>
+                  <p class="neo-cap-card__desc">
+                    Strategic planning that helps clients assess needs, invest
+                    wisely, and scale with confidence. Capacity building and
+                    technical training programs upskill internal IT teams for
+                    seamless system adoption. IT staff augmentation embeds
+                    senior Bytewise engineers and architects directly into your
+                    teams to accelerate delivery and fill critical technical
+                    gaps.
+                  </p>
+                  <div class="neo-cap-card__tags">
+                    <span class="neo-cap-card__tag">Strategy</span>
+                    <span class="neo-cap-card__tag">Roadmaps</span>
+                    <span class="neo-cap-card__tag">Capacity Building</span>
+                    <span class="neo-cap-card__tag">Staff Augmentation</span>
+                  </div>
+                  <div
+                    class="neo-cap-card__bottom-line"
+                    aria-hidden="true"
+                  ></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="neo-service-architecture reveal">
+              <div class="row g-4 g-xl-5 align-items-stretch">
+                <div class="col-lg-5">
+                  <div
+                    class="neo-service-architecture__content neo-service-card"
+                  >
+                    <div class="neo-pill neo-service-architecture__pill">
+                      <span class="neo-pill__dot"></span>
+                      Service Structure
+                    </div>
+                    <h2 class="neo-service-architecture__title">
+                      Structured around assessment, implementation, and
+                      long-term support.
+                    </h2>
+                    <p class="neo-service-architecture__copy">
+                      We align assessment, implementation, and support so
+                      systems stay dependable after go-live. That means clearer
+                      planning, sound implementation choices, and continuity
+                      once systems are in production.
+                    </p>
+
+                    <div class="neo-service-architecture__flow">
+                      <article
+                        class="neo-service-step neo-service-card tilt-card"
+                      >
+                        <span class="neo-service-step__index">01</span>
+                        <div>
+                          <h3>Assessment</h3>
+                          <p>
+                            Understand the environment, define priorities, and
+                            shape the right response early.
+                          </p>
+                        </div>
+                      </article>
+                      <article
+                        class="neo-service-step neo-service-card tilt-card"
+                      >
+                        <span class="neo-service-step__index">02</span>
+                        <div>
+                          <h3>Implementation</h3>
+                          <p>
+                            Translate strategy into software, ERP,
+                            infrastructure, and practical rollout decisions.
+                          </p>
+                        </div>
+                      </article>
+                      <article
+                        class="neo-service-step neo-service-card tilt-card"
+                      >
+                        <span class="neo-service-step__index">03</span>
+                        <div>
+                          <h3>Support</h3>
+                          <p>
+                            Keep systems stable, teams aligned, and next steps
+                            visible after launch.
+                          </p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="neo-service-architecture__visual">
+                    <div
+                      class="neo-service-architecture__visual-frame neo-service-card"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                        alt="Technology planning session"
+                      />
+                      <div
+                        class="neo-service-architecture__plan-card neo-service-card"
+                      >
+                        <span class="neo-service-architecture__eyebrow"
+                          >Delivery Map</span
+                        >
+                        <strong
+                          >From discovery to rollout, each phase stays
+                          connected.</strong
+                        >
+                        <ul class="neo-service-architecture__plan-list">
+                          <li>Assess requirements and operational needs</li>
+                          <li>
+                            Implement the right mix of systems and services
+                          </li>
+                          <li>Support continuity after deployment</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="neo-service-architecture__stats">
+                      <article
+                        class="neo-service-stat neo-service-card tilt-card"
+                      >
+                        <strong>4</strong>
+                        <span>Core service pillars</span>
+                      </article>
+                      <article
+                        class="neo-service-stat neo-service-card tilt-card"
+                      >
+                        <strong>ERP</strong>
+                        <span>Operations-focused system delivery</span>
+                      </article>
+                      <article
+                        class="neo-service-stat neo-service-card tilt-card"
+                      >
+                        <strong>ICT</strong>
+                        <span>One partner across the tech stack</span>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="neo-section neo-section--soft" id="services">
+          <div class="container-xxl">
+            <div class="neo-client-environments">
+              <div class="neo-client-environments__intro reveal">
+                <div class="neo-pill neo-pill--center">
+                  <span class="neo-pill__dot"></span>
+                  Client Environments
+                </div>
+                <h2 class="neo-client-environments__title">
+                  Tailored solutions for each organization we serve.
+                </h2>
+                <p class="neo-client-environments__copy">
+                  Bytewise Technologies supports private businesses, NGOs, and
+                  government institutions with solutions shaped around how they
+                  actually work.
+                </p>
+              </div>
+
+              <div
+                class="neo-client-grid reveal"
+                data-stagger-children=".neo-client-card"
+                data-stagger-delay="120"
+              >
+                <article class="neo-client-card">
+                  <div
+                    class="neo-client-card__media neo-client-card__media--business"
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <div class="neo-client-card__body">
+                    <span
+                      class="neo-client-card__tag neo-client-card__tag--business"
+                      >Business</span
+                    >
+                    <h3>
+                      Digital systems that help companies grow with more
+                      control.
+                    </h3>
+                    <ul class="neo-client-card__list">
+                      <li>Multi-location POS and inventory</li>
+                      <li>Custom CRM and sales portals</li>
+                      <li>Automated accounting integration</li>
+                    </ul>
+                    <a href="business.html" class="neo-inline-link"
+                      >Explore Business Solutions</a
+                    >
+                  </div>
+                </article>
+
+                <article class="neo-client-card">
+                  <div
+                    class="neo-client-card__media neo-client-card__media--ngo"
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <path
+                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <div class="neo-client-card__body">
+                    <span class="neo-client-card__tag neo-client-card__tag--ngo"
+                      >NGOs</span
+                    >
+                    <h3>
+                      Practical ICT support for mission-driven teams and
+                      programs.
+                    </h3>
+                    <ul class="neo-client-card__list">
+                      <li>M&amp;E dashboards for program reporting</li>
+                      <li>Grant and fund management ERPs</li>
+                      <li>Field connectivity for remote teams</li>
+                    </ul>
+                    <a href="ngo.html" class="neo-inline-link"
+                      >Explore NGO Solutions</a
+                    >
+                  </div>
+                </article>
+
+                <article class="neo-client-card">
+                  <div
+                    class="neo-client-card__media neo-client-card__media--government"
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 24 24" role="presentation">
+                      <path
+                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      ></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                  </div>
+                  <div class="neo-client-card__body">
+                    <span
+                      class="neo-client-card__tag neo-client-card__tag--government"
+                      >Government</span
+                    >
+                    <h3>
+                      Structured ICT solutions for institutional service
+                      delivery.
+                    </h3>
+                    <ul class="neo-client-card__list">
+                      <li>Secure document and records management</li>
+                      <li>Contract and procurement systems</li>
+                      <li>HR and payroll ERPs</li>
+                    </ul>
+                    <a href="government.html" class="neo-inline-link"
+                      >Explore Government Solutions</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="neo-process-band glass-panel reveal">
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                  <div class="neo-pill">
+                    <span class="neo-pill__dot"></span>
+                    How We Work
+                  </div>
+                  <h2 class="neo-section__title text-start">
+                    Need help with a new software, ERP, or infrastructure
+                    initiative?
+                  </h2>
+                  <p class="neo-section__copy text-start">
+                    Whether the need starts with strategy, development,
+                    deployment, or hardware planning, Bytewise Technologies
+                    follows a straightforward process that keeps decisions,
+                    delivery, and support aligned.
+                  </p>
+                  <a href="contact.html" class="btn btn-brand mt-3"
+                    >Discuss Your Project</a
+                  >
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <article class="neo-step-card glass-panel">
+                        <span>1</span>
+                        <h3>Assess</h3>
+                        <p>
+                          Understand the challenge, current systems, and
+                          business priorities.
+                        </p>
+                      </article>
+                    </div>
+                    <div class="col-6">
+                      <article class="neo-step-card glass-panel">
+                        <span>2</span>
+                        <h3>Plan</h3>
+                        <p>
+                          Define the right mix of software, ERP, infrastructure,
+                          and advisory work.
+                        </p>
+                      </article>
+                    </div>
+                    <div class="col-6">
+                      <article class="neo-step-card glass-panel">
+                        <span>3</span>
+                        <h3>Build</h3>
+                        <p>
+                          Implement, configure, and deploy solutions with clear
+                          milestones.
+                        </p>
+                      </article>
+                    </div>
+                    <div class="col-6">
+                      <article class="neo-step-card glass-panel">
+                        <span>4</span>
+                        <h3>Support</h3>
+                        <p>
+                          Guide adoption, improve performance, and respond to
+                          evolving needs.
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="neo-section" id="projects">
+          <div class="container-xxl">
+            <div class="neo-section__heading text-center reveal">
+              <div class="neo-pill neo-pill--center">
+                <span class="neo-pill__dot"></span>
+                Project Highlights
+              </div>
+              <h2 class="neo-section__title">
+                The kinds of ICT engagements Bytewise Technologies is built to
+                deliver.
+              </h2>
+              <p class="neo-section__copy">
+                Software builds, ERP rollouts, infrastructure deployments, and
+                advisory work across business, NGO, and government sectors.
+              </p>
+            </div>
+
+            <div class="row g-4 mt-1">
+              <div class="col-md-6 reveal">
+                <article class="neo-project-card glass-panel">
+                  <img
+                    src="https://images.unsplash.com/photo-1581092160607-ee22731a5f7f?q=80&w=1200&auto=format&fit=crop"
+                    alt="Custom software delivery"
+                    class="neo-project-card__image"
+                  />
+                  <div class="neo-project-card__body">
+                    <span class="neo-project-card__tag">Software</span>
+                    <h3>
+                      Custom applications designed around real workflows and
+                      measurable outcomes.
+                    </h3>
+                    <p>
+                      From portals and dashboards to mobile tools and databases,
+                      the focus stays on usability and fit.
+                    </p>
+                    <a href="projects.html" class="neo-inline-link"
+                      >See Project Directions</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 reveal">
+                <article class="neo-project-card glass-panel">
+                  <img
+                    src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop"
+                    alt="IT infrastructure deployment"
+                    class="neo-project-card__image"
+                  />
+                  <div class="neo-project-card__body">
+                    <span class="neo-project-card__tag">Infrastructure</span>
+                    <h3>
+                      IT equipment, networking, and rollout support for stable
+                      operations.
+                    </h3>
+                    <p>
+                      Best suited for organizations that need dependable
+                      devices, network setup, and implementation guidance.
+                    </p>
+                    <a href="projects.html" class="neo-inline-link"
+                      >See Infrastructure Work</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="neo-sustain-band glass-panel reveal">
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                  <div class="neo-pill">
+                    <span class="neo-pill__dot"></span>
+                    Delivery Commitment
+                  </div>
+                  <h2 class="neo-section__title text-start">
+                    Built for long-term technology value, not one-off installs.
+                  </h2>
+                  <p class="neo-section__copy text-start">
+                    We support evolving organizations with consistent
+                    communication, disciplined implementation, and technology
+                    choices that scale as needs expand.
+                  </p>
+
+                  <div class="neo-commit-list">
+                    <div class="neo-commit-item">
+                      <strong>Requirement-first planning</strong>
+                      <span
+                        >Every engagement starts with goals, workflows, users,
+                        and constraints.</span
+                      >
+                    </div>
+                    <div class="neo-commit-item">
+                      <strong>Implementation with clarity</strong>
+                      <span
+                        >Build stages, infrastructure tasks, and rollout
+                        priorities stay visible.</span
+                      >
+                    </div>
+                    <div class="neo-commit-item">
+                      <strong>Advisory beyond launch</strong>
+                      <span
+                        >Clients know what is changing, what matters, and what
+                        should happen next.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="neo-sustain-band__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=1200&auto=format&fit=crop"
+                      alt="Technology infrastructure and monitoring"
+                    />
+                    <div class="neo-progress-card neo-progress-card--top">
+                      <h3>Implementation visibility</h3>
+                      <div class="neo-progress-bar">
+                        <span style="width: 88%"></span>
+                      </div>
+                      <small
+                        >Planning, build stages, and rollout priorities kept in
+                        sync.</small
+                      >
+                    </div>
+                    <div class="neo-progress-card neo-progress-card--bottom">
+                      <h3>Support continuity</h3>
+                      <div class="neo-progress-bar">
+                        <span style="width: 82%"></span>
+                      </div>
+                      <small
+                        >Built for dependable operations after go-live, not just
+                        the launch moment.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="neo-section neo-section--soft">
+          <div class="container-xxl">
+            <div class="row g-5 align-items-start">
+              <div class="col-lg-6 reveal">
+                <div class="neo-pill">
+                  <span class="neo-pill__dot"></span>
+                  Common Questions
+                </div>
+                <h2 class="neo-section__title text-start">
+                  Questions organizations usually ask before getting started.
+                </h2>
+                <p class="neo-section__copy text-start">
+                  Find quick answers about our services, engagement models, and
+                  how we approach complex technology challenges.
+                </p>
+
+                <div class="accordion neo-faq glass-panel mt-4" id="homeFaq">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqOne"
+                        aria-expanded="true"
+                        aria-controls="faqOne"
+                      >
+                        What types of clients does Bytewise Technologies serve?
+                      </button>
+                    </h3>
+                    <div
+                      id="faqOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#homeFaq"
+                    >
+                      <div class="accordion-body">
+                        Corporations, NGOs, and government institutions that
+                        need software, ERP systems, IT infrastructure, or
+                        strategic technology guidance.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqTwo"
+                        aria-expanded="false"
+                        aria-controls="faqTwo"
+                      >
+                        Can Bytewise Technologies handle both systems and
+                        equipment?
+                      </button>
+                    </h3>
+                    <div
+                      id="faqTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#homeFaq"
+                    >
+                      <div class="accordion-body">
+                        Yes. Bytewise Technologies can combine software, ERP
+                        planning, hardware supply, network setup, and consulting
+                        when the project needs a complete solution.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faqThree"
+                        aria-expanded="false"
+                        aria-controls="faqThree"
+                      >
+                        What makes the Bytewise Technologies approach different?
+                      </button>
+                    </h3>
+                    <div
+                      id="faqThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#homeFaq"
+                    >
+                      <div class="accordion-body">
+                        The focus is on clear language, practical planning, and
+                        implementation that connects strategy, systems, and
+                        support from start to finish.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 reveal">
+                <div class="neo-contact-panel glass-panel">
+                  <div class="neo-pill">
+                    <span class="neo-pill__dot"></span>
+                    Contact Preview
+                  </div>
+                  <h2 class="neo-section__title text-start">
+                    Speak with the Bytewise Technologies team.
+                  </h2>
+                  <p class="neo-section__copy text-start">
+                    If you have an upcoming software, ERP, infrastructure, or
+                    consulting need, use the contact page and we will route it
+                    to the right discussion.
+                  </p>
+
+                  <div class="row g-3 mt-2">
+                    <div class="col-sm-6">
+                      <article class="neo-contact-card">
+                        <strong>Email</strong>
+                        <span>info@bytewiseict.com</span>
+                      </article>
+                    </div>
+                    <div class="col-sm-6">
+                      <article class="neo-contact-card">
+                        <strong>Response</strong>
+                        <span>Fast follow-up on new ICT inquiries</span>
+                      </article>
+                    </div>
+                    <div class="col-12">
+                      <article class="neo-contact-card">
+                        <strong>Best for</strong>
+                        <span
+                          >Software planning, ERP discovery, infrastructure
+                          requests, and IT consulting questions.</span
+                        >
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="neo-contact-panel__actions">
+                    <a href="contact.html" class="btn btn-brand"
+                      >Get in Touch</a
+                    >
+                    <a href="services.html" class="btn btn-outline-brand"
+                      >View Services</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="neo-app-band">
+          <div class="container-xxl">
+            <div class="neo-app-band__shell reveal">
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                  <div class="neo-pill neo-pill--light">
+                    <span class="neo-pill__dot"></span>
+                    Technology Partnership
+                  </div>
+                  <h2 class="neo-app-band__title">
+                    Move from strategy to rollout with one clear ICT partner.
+                  </h2>
+                  <p class="neo-app-band__copy">
+                    We support your organization from initial discovery and
+                    build planning through implementation and ongoing support.
+                  </p>
+
+                  <div class="row g-4 mt-2">
+                    <div class="col-sm-6">
+                      <div class="neo-app-feature">
+                        <strong>Discovery</strong>
+                        <span
+                          >Clarify needs, priorities, and the right technology
+                          direction early.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="neo-app-feature">
+                        <strong>Delivery Roadmap</strong>
+                        <span
+                          >Keep milestones, dependencies, and rollout phases
+                          easy to follow.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="neo-app-feature">
+                        <strong>Systems Rollout</strong>
+                        <span
+                          >Coordinate software, ERP, devices, and infrastructure
+                          with clear milestones.</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="neo-app-feature">
+                        <strong>Ongoing Advisory</strong>
+                        <span
+                          >Stay aligned on upgrades, support priorities, and
+                          future improvements.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="neo-app-band__actions">
+                    <a href="contact.html" class="btn btn-light"
+                      >Contact Bytewise Technologies</a
+                    >
+                    <a href="services.html" class="btn btn-outline-light"
+                      >Explore Services</a
+                    >
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="neo-device-mockup">
+                    <div class="neo-device-mockup__frame">
+                      <div class="neo-device-mockup__notch"></div>
+                      <img
+                        src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1200&auto=format&fit=crop"
+                        alt="Digital systems dashboard"
+                      />
+                    </div>
+                    <div class="neo-device-tag neo-device-tag--right">
+                      Clear rollout planning
+                    </div>
+                    <div class="neo-device-tag neo-device-tag--left">
+                      Better systems visibility
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="neo-footer">
+        <div class="container-xxl">
+          <div class="neo-footer__top">
+            <div class="row g-5">
+              <div class="col-lg-4">
+                <a href="index.html" class="brand-link text-decoration-none">
+                  <span class="brand-mark brand-mark--image">
+                    <img
+                      src="assets/bytewise-logo.png"
+                      alt="Bytewise Technologies logo"
+                    />
+                  </span>
+                  <span>
+                    <span class="brand-name">Bytewise Technologies</span>
+                    <span class="brand-tagline d-block"
+                      >Software, ERP, Infrastructure &amp; IT Consulting</span
+                    >
+                  </span>
+                </a>
+                <p class="neo-footer__intro">
+                  Bytewise Technologies supports organizations with custom
+                  software development, ERP systems, cloud and enterprise
+                  infrastructure, and strategic consulting that turns ideas into
+                  practical systems.
+                </p>
+                <div class="neo-footer__contact">
+                  <span>info@bytewiseict.com</span>
+                  <span
+                    >Software, ERP, infrastructure, and consulting
+                    inquiries</span
+                  >
+                  <span>Business, NGO, and government support</span>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Company</h3>
+                <ul class="neo-footer__links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Services</h3>
+                <ul class="neo-footer__links">
+                  <li>
+                    <a href="services.html#service-software-development"
+                      >Software Development</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#service-erp-systems">ERP Systems</a>
+                  </li>
+                  <li>
+                    <a href="services.html#service-it-equipment"
+                      >Cloud &amp; Enterprise Infrastructure</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#service-it-consulting"
+                      >IT Consulting</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Industries</h3>
+                <ul class="neo-footer__links">
+                  <li><a href="business.html">Business</a></li>
+                  <li><a href="ngo.html">NGOs</a></li>
+                  <li><a href="government.html">Government</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Resources</h3>
+                <ul class="neo-footer__links">
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="#homeFaq">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="neo-footer__stats glass-panel">
+            <div>
+              <strong>4 Service Pillars</strong>
+              <span>Software, ERP, infrastructure, and advisory</span>
+            </div>
+            <div>
+              <strong>Business / NGO / Government</strong>
+              <span>Client environments supported</span>
+            </div>
+            <div>
+              <strong>Structured Delivery</strong>
+              <span>Assess, build, deploy, and guide</span>
+            </div>
+          </div>
+
+          <div class="neo-footer__bottom">
+            <p>&copy; 2026 Bytewise Technologies. All rights reserved.</p>
+            <div class="neo-footer__bottom-links">
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

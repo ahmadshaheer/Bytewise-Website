@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bytewise Technologies | Services</title>
+    <meta
+      name="description"
+      content="Explore Bytewise Technologies services in software development, ERP systems, cloud and enterprise infrastructure, and strategic IT consulting."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t !== "dark" && t !== "light") {
+            t = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-bs-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    data-page="services"
+    class="services-page home-page--neo services-page--neo"
+  >
+    <div class="site-shell">
+      <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-xxl neo-nav-wrap">
+            <a href="index.html" class="brand-link navbar-brand p-0 m-0">
+              <span class="brand-mark brand-mark--image">
+                <img
+                  src="assets/bytewise-logo.png"
+                  alt="Bytewise Technologies logo"
+                />
+              </span>
+              <span>
+                <span class="brand-name">Bytewise Technologies</span>
+                <span class="brand-tagline d-block"
+                  >Software, ERP, Infrastructure &amp; IT Consulting</span
+                >
+              </span>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#siteNav"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul
+                class="navbar-nav mx-auto align-items-xl-center gap-xl-2 site-nav"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="services.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="services.html"
+                        >All Services</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="business.html">Business</a>
+                    </li>
+                    <li><a class="dropdown-item" href="ngo.html">NGOs</a></li>
+                    <li>
+                      <a class="dropdown-item" href="government.html"
+                        >Government</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+              </ul>
+              <div class="header-actions">
+                <button
+                  type="button"
+                  class="theme-toggle"
+                  id="theme-toggle"
+                  aria-label="Switch to dark mode"
+                  aria-pressed="false"
+                >
+                  <svg
+                    class="theme-toggle__icon theme-toggle__icon--sun"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                      d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                    />
+                  </svg>
+                  <svg
+                    class="theme-toggle__icon theme-toggle__icon--moon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                    />
+                  </svg>
+                </button>
+                <a href="contact.html" class="btn btn-brand neo-header-cta"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <a
+        href="contact.html"
+        class="neo-floating-contact d-none d-lg-inline-flex"
+        >Contact Us</a
+      >
+
+      <main class="neo-services">
+        <section class="services-banner">
+          <div class="container-xxl">
+            <h1>Services</h1>
+          </div>
+        </section>
+
+        <section class="services-intro" id="core-capabilities">
+          <div class="container-xxl">
+            <div class="services-intro__inner reveal">
+              <h2>What Bytewise Technologies Offers</h2>
+              <p>
+                We provide practical, scalable technology services for
+                corporations, NGOs, and government institutions. We help you
+                choose the right systems, implement them flawlessly, and support
+                them as your operational needs evolve.
+              </p>
+              <p>
+                Our service model is built around four focused areas so clients
+                can quickly understand where we fit and how we help.
+              </p>
+              <h3>Core Service Areas</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="services-simple">
+          <div class="container-xxl">
+            <div class="services-simple__list">
+              <article
+                class="service-showcase reveal"
+                id="service-software-development"
+              >
+                <div class="service-showcase__media">
+                  <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+                    alt="Software development and digital product team"
+                  />
+                </div>
+                <div class="service-showcase__body">
+                  <h2>Software Development</h2>
+                  <ul>
+                    <li>
+                      Custom web applications for internal and customer-facing
+                      workflows
+                    </li>
+                    <li>
+                      Mobile apps that keep teams and services connected in the
+                      field
+                    </li>
+                    <li>
+                      Database-driven systems, dashboards, portals, and
+                      reporting tools
+                    </li>
+                    <li>
+                      Solutions designed around real operations instead of
+                      generic templates
+                    </li>
+                  </ul>
+                  <a href="contact.html" class="service-showcase__link"
+                    >Discuss software needs</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="service-showcase service-showcase--reverse reveal"
+                id="service-erp-systems"
+              >
+                <div class="service-showcase__media">
+                  <img
+                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+                    alt="ERP planning and enterprise operations meeting"
+                  />
+                </div>
+                <div class="service-showcase__body">
+                  <h2>ERP Systems</h2>
+                  <ul>
+                    <li>
+                      Enterprise management systems for corporations, NGOs, and
+                      government institutions
+                    </li>
+                    <li>
+                      Human Resources &amp; Payroll, Procurement &amp; Vendor
+                      Scorecards, Inventory &amp; Warehouse Routing, and
+                      Multi-currency Financials
+                    </li>
+                    <li>
+                      Implementation guidance that balances usability,
+                      governance, and scale
+                    </li>
+                    <li>
+                      Seamless data migration from legacy systems and
+                      disconnected spreadsheets into a unified architecture
+                    </li>
+                  </ul>
+                  <a href="contact.html" class="service-showcase__link"
+                    >Explore ERP systems</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="service-showcase reveal"
+                id="service-it-equipment"
+              >
+                <div class="service-showcase__media">
+                  <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+                    alt="Cloud hosting, enterprise servers, and managed infrastructure"
+                  />
+                </div>
+                <div class="service-showcase__body">
+                  <h2>Cloud &amp; Enterprise Infrastructure</h2>
+                  <ul>
+                    <li>
+                      Managed cloud hosting and private cloud architecture,
+                      including AWS and on-premise environments
+                    </li>
+                    <li>
+                      On-premise server design, connectivity, and secure
+                      deployment for offices and distributed teams
+                    </li>
+                    <li>
+                      24/7 uptime monitoring, network security, and operational
+                      continuity for mission-critical systems
+                    </li>
+                    <li>
+                      Infrastructure planning that connects software, ERP, and
+                      compliance requirements into one reliable stack
+                    </li>
+                  </ul>
+                  <a href="contact.html" class="service-showcase__link"
+                    >Plan infrastructure support</a
+                  >
+                </div>
+              </article>
+
+              <article
+                class="service-showcase service-showcase--reverse reveal"
+                id="service-it-consulting"
+              >
+                <div class="service-showcase__media">
+                  <img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                    alt="IT consulting and strategic planning session"
+                  />
+                </div>
+                <div class="service-showcase__body">
+                  <h2>IT Consulting</h2>
+                  <ul>
+                    <li>
+                      Strategic technology advisory for new initiatives and
+                      modernization decisions
+                    </li>
+                    <li>
+                      Assessment of current systems, process gaps, and
+                      implementation priorities
+                    </li>
+                    <li>
+                      Planning support that helps clients invest in the right
+                      tools at the right time
+                    </li>
+                    <li>
+                      Guidance that turns unclear technology questions into
+                      practical next steps
+                    </li>
+                    <li>
+                      Capacity Building &amp; Technical Training: Structured
+                      upskilling programs to train internal IT teams and ensure
+                      seamless system adoption.
+                    </li>
+                    <li>
+                      IT Staff Augmentation: Embed senior Bytewise engineers and
+                      architects directly into your internal teams to accelerate
+                      project delivery and fill critical technical gaps.
+                    </li>
+                  </ul>
+                  <a href="contact.html" class="service-showcase__link"
+                    >Discuss consulting needs</a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="services-trust">
+          <div class="container-xxl">
+            <div class="services-testimonial reveal">
+              <div class="services-testimonial__media">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop"
+                  alt="Technology collaboration and planning workshop"
+                />
+              </div>
+              <div class="services-testimonial__card">
+                <span class="services-testimonial__mark">&ldquo;</span>
+                <p>
+                  We help clients move from planning to implementation with
+                  clear communication, disciplined delivery, and systems that
+                  remain useful after launch.
+                </p>
+                <strong>Built for dependable ICT delivery</strong>
+                <span
+                  >Technology support for organizations that need structure and
+                  execution they can rely on</span
+                >
+              </div>
+            </div>
+
+            <div class="services-clients reveal">
+              <h2>Who we support</h2>
+              <p>
+                Bytewise Technologies works with private businesses, NGOs, and
+                government institutions. Select a sector to see focused
+                solutions, or view our full service offering.
+              </p>
+              <a href="projects.html" class="services-clients__link"
+                >See our project directions</a
+              >
+
+              <div class="services-clients__grid" aria-label="Client sectors">
+                <a
+                  href="business.html"
+                  class="client-badge text-decoration-none"
+                >
+                  <span class="client-badge__seal">BIZ</span
+                  ><small>Private companies</small>
+                </a>
+                <a
+                  href="business.html"
+                  class="client-badge text-decoration-none"
+                >
+                  <span class="client-badge__seal">SME</span
+                  ><small>Growing businesses</small>
+                </a>
+                <a href="ngo.html" class="client-badge text-decoration-none">
+                  <span class="client-badge__seal">NGO</span
+                  ><small>Non-governmental organizations</small>
+                </a>
+                <a href="ngo.html" class="client-badge text-decoration-none">
+                  <span class="client-badge__seal">DEV</span
+                  ><small>Program delivery teams</small>
+                </a>
+                <a
+                  href="government.html"
+                  class="client-badge text-decoration-none"
+                >
+                  <span class="client-badge__seal">GOV</span
+                  ><small>Government institutions</small>
+                </a>
+                <a
+                  href="services.html#service-erp-systems"
+                  class="client-badge text-decoration-none"
+                >
+                  <span class="client-badge__seal">ERP</span
+                  ><small>Enterprise operations teams</small>
+                </a>
+                <a
+                  href="services.html#service-it-equipment"
+                  class="client-badge text-decoration-none"
+                >
+                  <span class="client-badge__seal">NET</span
+                  ><small>Infrastructure environments</small>
+                </a>
+                <a
+                  href="services.html#service-software-development"
+                  class="client-badge text-decoration-none"
+                >
+                  <span class="client-badge__seal">APP</span
+                  ><small>Digital transformation initiatives</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="neo-footer">
+        <div class="container-xxl">
+          <div class="neo-footer__top">
+            <div class="row g-5">
+              <div class="col-lg-4">
+                <a href="index.html" class="brand-link text-decoration-none">
+                  <span class="brand-mark brand-mark--image">
+                    <img
+                      src="assets/bytewise-logo.png"
+                      alt="Bytewise Technologies logo"
+                    />
+                  </span>
+                  <span>
+                    <span class="brand-name">Bytewise Technologies</span>
+                    <span class="brand-tagline d-block"
+                      >Software, ERP, Infrastructure &amp; IT Consulting</span
+                    >
+                  </span>
+                </a>
+                <p class="neo-footer__intro">
+                  Bytewise Technologies helps organizations adopt better systems
+                  through software development, ERP implementation, IT
+                  infrastructure support, and strategic consulting.
+                </p>
+                <div class="neo-footer__contact">
+                  <span>info@bytewiseict.com</span>
+                  <span>Software, ERP, and infrastructure inquiries</span>
+                  <span>Business, NGO, and government support</span>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Company</h3>
+                <ul class="neo-footer__links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Services</h3>
+                <ul class="neo-footer__links">
+                  <li>
+                    <a href="services.html#service-software-development"
+                      >Software Development</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#service-erp-systems">ERP Systems</a>
+                  </li>
+                  <li>
+                    <a href="services.html#service-it-equipment"
+                      >Cloud &amp; Enterprise Infrastructure</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#service-it-consulting"
+                      >IT Consulting</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Industries</h3>
+                <ul class="neo-footer__links">
+                  <li><a href="business.html">Business</a></li>
+                  <li><a href="ngo.html">NGOs</a></li>
+                  <li><a href="government.html">Government</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-lg-2">
+                <h3 class="neo-footer__title">Resources</h3>
+                <ul class="neo-footer__links">
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="neo-footer__stats glass-panel">
+            <div>
+              <strong>4 Service Areas</strong>
+              <span>Focused ICT support with clear positioning</span>
+            </div>
+            <div>
+              <strong>Multi-Sector Support</strong>
+              <span>Built for companies, NGOs, and institutions</span>
+            </div>
+            <div>
+              <strong>Structured Delivery</strong>
+              <span>Assess, implement, equip, and guide</span>
+            </div>
+          </div>
+
+          <div class="neo-footer__bottom">
+            <p>&copy; 2026 Bytewise Technologies. All rights reserved.</p>
+            <div class="neo-footer__bottom-links">
+              <a href="contact.html">Privacy</a>
+              <a href="contact.html">Terms</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
