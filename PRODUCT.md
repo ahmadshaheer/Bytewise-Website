@@ -10,7 +10,7 @@ Mixed audience: procurement officers, executives, and technical leads at corpora
 
 ## Product Purpose
 
-Establish Bytewise Technologies as a credible, capable ICT partner for software development, ERP systems, IT equipment and infrastructure, and strategic IT consulting. Success means visitors trust the firm enough to initiate contact or advance a procurement conversation.
+Establish Bytewise Technologies as a credible, capable ICT partner for software development, ERP systems, cloud and enterprise infrastructure, and strategic IT consulting. Success means visitors trust the firm enough to initiate contact or advance a procurement conversation.
 
 ## Brand Personality
 

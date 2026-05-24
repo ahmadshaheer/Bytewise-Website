@@ -5277,6 +5277,28 @@ a.neo-cap-card:focus-visible {
   line-height: 1.55;
 }
 
+.neo-trust-highlight {
+  padding: 1.1rem 1rem;
+}
+
+.neo-trust-highlight__label {
+  display: block;
+  color: var(--neo-pill-text);
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.neo-trust-highlight p {
+  margin: 0.65rem 0 0;
+  color: var(--neo-ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
 .neo-client-environments {
   position: relative;
 }
@@ -5945,6 +5967,18 @@ a.neo-cap-card:focus-visible {
   color: var(--neo-ink-muted);
 }
 
+.neo-footer__contact a {
+  color: var(--neo-pill-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.neo-footer__contact a:hover,
+.neo-footer__contact a:focus-visible {
+  color: var(--neo-ink);
+  text-decoration: underline;
+}
+
 .neo-footer__title {
   margin: 0;
   color: var(--neo-ink);
@@ -5966,27 +6000,6 @@ a.neo-cap-card:focus-visible {
 .neo-footer__bottom-links a {
   color: var(--neo-ink-soft);
   text-decoration: none;
-}
-
-.neo-footer__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 1.4rem;
-  margin-top: 1rem;
-}
-
-.neo-footer__stats strong {
-  display: block;
-  color: var(--neo-pill-text);
-  font-size: 1.15rem;
-}
-
-.neo-footer__stats span {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--neo-ink-soft);
-  line-height: 1.55;
 }
 
 .neo-footer__bottom {
@@ -6130,10 +6143,6 @@ a.neo-cap-card:focus-visible {
 
   .neo-device-tag--left {
     left: -1rem;
-  }
-
-  .neo-footer__stats {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -8099,7 +8108,6 @@ a.neo-cap-card:focus-visible {
 [data-bs-theme="dark"] .neo-project-card__tag,
 [data-bs-theme="dark"] .neo-mini-stat__icon,
 [data-bs-theme="dark"] .contact-card__eyebrow,
-[data-bs-theme="dark"] .neo-footer__stats strong,
 [data-bs-theme="dark"] .neo-inline-link {
   color: var(--neo-pill-text);
 }
@@ -8274,7 +8282,8 @@ a.neo-cap-card:focus-visible {
 [data-bs-theme="dark"]
   .neo-service-architecture__content
   .neo-service-step.neo-service-card,
-[data-bs-theme="dark"] .neo-service-stat.neo-service-card {
+[data-bs-theme="dark"] .neo-service-stat.neo-service-card,
+[data-bs-theme="dark"] .neo-trust-highlight.neo-service-card {
   background: rgba(255, 255, 255, 0.03);
   border-color: var(--card-border);
   box-shadow: none;
@@ -8283,7 +8292,8 @@ a.neo-cap-card:focus-visible {
 [data-bs-theme="dark"]
   .neo-service-architecture__content
   .neo-service-step.neo-service-card::before,
-[data-bs-theme="dark"] .neo-service-stat.neo-service-card::before {
+[data-bs-theme="dark"] .neo-service-stat.neo-service-card::before,
+[data-bs-theme="dark"] .neo-trust-highlight.neo-service-card::before {
   display: none;
 }
 
@@ -8309,6 +8319,7 @@ a.neo-cap-card:focus-visible {
 
 [data-bs-theme="dark"] #features .neo-service-architecture__copy,
 [data-bs-theme="dark"] #features .neo-service-stat span,
+[data-bs-theme="dark"] #features .neo-trust-highlight p,
 [data-bs-theme="dark"] #features .neo-service-step p,
 [data-bs-theme="dark"] #features .neo-cap-card__desc,
 [data-bs-theme="dark"] #features .neo-service-architecture__plan-list li {
