@@ -152,16 +152,308 @@ function initializeRotatingImages() {
   });
 }
 
+const currentPath = window.location.pathname.split("/").pop() || "index.html";
+const servicesPages = new Set([
+  "services.html",
+  "business.html",
+  "ngo.html",
+  "government.html"
+]);
+
 navLinks.forEach((link) => {
   const href = link.getAttribute("href");
   const isActive =
     (currentPage === "home" && href === "index.html") ||
-    (currentPage === "services" && href === "services.html") ||
+    (servicesPages.has(currentPath) && href === "services.html") ||
     (currentPage === "projects" && href === "projects.html") ||
     (currentPage === "contact" && href === "contact.html");
 
   link.classList.toggle("active", isActive);
 });
+
+document.querySelectorAll(".dropdown-item").forEach((link) => {
+  const href = link.getAttribute("href");
+  const isActive = href === currentPath;
+
+  link.classList.toggle("active", isActive);
+
+  if (isActive) {
+    link.setAttribute("aria-current", "page");
+  } else {
+    link.removeAttribute("aria-current");
+  }
+});
+
+const CONTACT_EMAIL = "info@bytewiseict.com";
+
+function initializeContactForm() {
+  const form = document.getElementById("contact-form-form");
+
+  if (!form || form.dataset.initialized === "true") {
+    return;
+  }
+
+  form.dataset.initialized = "true";
+
+  const statusPanel = document.getElementById("contact-form-status");
+  const submitButton = document.getElementById("contact-form-submit");
+  const fields = {
+    firstName: form.querySelector("#contact-first-name"),
+    lastName: form.querySelector("#contact-last-name"),
+    email: form.querySelector("#contact-email"),
+    phone: form.querySelector("#contact-phone"),
+    subject: form.querySelector("#contact-subject"),
+    message: form.querySelector("#contact-message")
+  };
+
+  const fieldRules = {
+    firstName: {
+      required: true,
+      label: "First name",
+      validate(value) {
+        if (!value.trim()) {
+          return "Enter your first name.";
+        }
+
+        if (value.trim().length < 2) {
+          return "First name must be at least 2 characters.";
+        }
+
+        return "";
+      }
+    },
+    lastName: {
+      required: true,
+      label: "Last name",
+      validate(value) {
+        if (!value.trim()) {
+          return "Enter your last name.";
+        }
+
+        if (value.trim().length < 2) {
+          return "Last name must be at least 2 characters.";
+        }
+
+        return "";
+      }
+    },
+    email: {
+      required: true,
+      label: "Email",
+      validate(value) {
+        if (!value.trim()) {
+          return "Enter your work email address.";
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) {
+          return "Enter a valid email address.";
+        }
+
+        return "";
+      }
+    },
+    phone: {
+      required: false,
+      label: "Phone",
+      validate(value) {
+        if (!value.trim()) {
+          return "";
+        }
+
+        if (value.trim().length < 7) {
+          return "Enter a valid phone number or leave this field blank.";
+        }
+
+        return "";
+      }
+    },
+    subject: {
+      required: true,
+      label: "Subject",
+      validate(value) {
+        if (!value.trim()) {
+          return "Add a subject so we can route your inquiry.";
+        }
+
+        return "";
+      }
+    },
+    message: {
+      required: true,
+      label: "Message",
+      validate(value) {
+        if (!value.trim()) {
+          return "Tell us about your organization and ICT need.";
+        }
+
+        if (value.trim().length < 20) {
+          return "Add a few more details so we can respond with the right next step.";
+        }
+
+        return "";
+      }
+    }
+  };
+
+  const errorIds = {
+    firstName: "contact-first-name-error",
+    lastName: "contact-last-name-error",
+    email: "contact-email-error",
+    phone: "contact-phone-error",
+    subject: "contact-subject-error",
+    message: "contact-message-error"
+  };
+
+  function setFieldError(fieldName, message) {
+    const field = fields[fieldName];
+    const errorNode = document.getElementById(errorIds[fieldName]);
+
+    if (!field) {
+      return;
+    }
+
+    field.setAttribute("aria-invalid", message ? "true" : "false");
+
+    if (errorNode) {
+      errorNode.textContent = message;
+    }
+  }
+
+  function clearFormStatus() {
+    if (!statusPanel) {
+      return;
+    }
+
+    statusPanel.hidden = true;
+    statusPanel.textContent = "";
+    statusPanel.classList.remove(
+      "contact-form__status--success",
+      "contact-form__status--error"
+    );
+  }
+
+  function showFormStatus(message, type) {
+    if (!statusPanel) {
+      return;
+    }
+
+    statusPanel.hidden = false;
+    statusPanel.textContent = message;
+    statusPanel.classList.remove(
+      "contact-form__status--success",
+      "contact-form__status--error"
+    );
+    statusPanel.classList.add(
+      type === "success"
+        ? "contact-form__status--success"
+        : "contact-form__status--error"
+    );
+  }
+
+  function validateForm() {
+    let firstInvalidField = null;
+    let isValid = true;
+
+    Object.entries(fieldRules).forEach(([fieldName, rule]) => {
+      const field = fields[fieldName];
+      const message = rule.validate(field ? field.value : "");
+      setFieldError(fieldName, message);
+
+      if (message) {
+        isValid = false;
+
+        if (!firstInvalidField) {
+          firstInvalidField = field;
+        }
+      }
+    });
+
+    if (firstInvalidField) {
+      firstInvalidField.focus();
+    }
+
+    return isValid;
+  }
+
+  Object.keys(fields).forEach((fieldName) => {
+    const field = fields[fieldName];
+
+    if (!field) {
+      return;
+    }
+
+    field.addEventListener("input", () => {
+      const message = fieldRules[fieldName].validate(field.value);
+      setFieldError(fieldName, message);
+
+      if (message === "") {
+        clearFormStatus();
+      }
+    });
+
+    field.addEventListener("blur", () => {
+      setFieldError(fieldName, fieldRules[fieldName].validate(field.value));
+    });
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearFormStatus();
+
+    if (!validateForm()) {
+      showFormStatus(
+        "Check the highlighted fields and try again.",
+        "error"
+      );
+      return;
+    }
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Preparing request...";
+    }
+
+    const fullName =
+      fields.firstName.value.trim() + " " + fields.lastName.value.trim();
+    const subject = fields.subject.value.trim();
+    const bodyLines = [
+      "Consultation request from the Bytewise Technologies website",
+      "",
+      "Name: " + fullName,
+      "Email: " + fields.email.value.trim()
+    ];
+
+    if (fields.phone.value.trim()) {
+      bodyLines.push("Phone: " + fields.phone.value.trim());
+    }
+
+    bodyLines.push("", fields.message.value.trim());
+
+    const mailtoUrl =
+      "mailto:" +
+      CONTACT_EMAIL +
+      "?subject=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(bodyLines.join("\n"));
+
+    window.location.href = mailtoUrl;
+
+    showFormStatus(
+      "Your email app should open with your message ready to send. If it did not open, email " +
+        CONTACT_EMAIL +
+        " directly with the same details.",
+      "success"
+    );
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = "Request a Consultation";
+    }
+  });
+}
+
+initializeContactForm();
 
 if (siteHeader) {
   let headerFrame = null;

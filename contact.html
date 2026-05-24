@@ -228,54 +228,163 @@
                     </p>
                   </div>
 
-                  <form class="row g-3 contact-form">
+                  <div
+                    class="contact-form__status"
+                    id="contact-form-status"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                  ></div>
+
+                  <form
+                    class="row g-3 contact-form"
+                    id="contact-form-form"
+                    novalidate
+                  >
                     <div class="col-md-6">
-                      <label class="contact-field">
-                        <span>First Name</span>
-                        <input type="text" placeholder="First name" />
-                      </label>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="contact-field">
-                        <span>Last Name</span>
-                        <input type="text" placeholder="Last name" />
-                      </label>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="contact-field">
-                        <span>Email</span>
-                        <input
-                          type="email"
-                          placeholder="name@organization.com"
-                        />
-                      </label>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="contact-field">
-                        <span>Phone</span>
-                        <input type="tel" placeholder="+93 (0) 789 123 456" />
-                      </label>
-                    </div>
-                    <div class="col-12">
-                      <label class="contact-field">
-                        <span>Subject</span>
+                      <label class="contact-field" for="contact-first-name">
+                        <span
+                          >First Name
+                          <span class="contact-field__required" aria-hidden="true"
+                            >*</span
+                          ></span
+                        >
                         <input
                           type="text"
-                          placeholder="Software project, ERP system, IT equipment, consulting"
+                          id="contact-first-name"
+                          name="firstName"
+                          placeholder="First name"
+                          required
+                          maxlength="80"
+                          autocomplete="given-name"
                         />
+                        <span
+                          class="contact-field__error"
+                          id="contact-first-name-error"
+                          role="alert"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="contact-field" for="contact-last-name">
+                        <span
+                          >Last Name
+                          <span class="contact-field__required" aria-hidden="true"
+                            >*</span
+                          ></span
+                        >
+                        <input
+                          type="text"
+                          id="contact-last-name"
+                          name="lastName"
+                          placeholder="Last name"
+                          required
+                          maxlength="80"
+                          autocomplete="family-name"
+                        />
+                        <span
+                          class="contact-field__error"
+                          id="contact-last-name-error"
+                          role="alert"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="contact-field" for="contact-email">
+                        <span
+                          >Email
+                          <span class="contact-field__required" aria-hidden="true"
+                            >*</span
+                          ></span
+                        >
+                        <input
+                          type="email"
+                          id="contact-email"
+                          name="email"
+                          placeholder="name@organization.com"
+                          required
+                          maxlength="120"
+                          autocomplete="email"
+                          inputmode="email"
+                        />
+                        <span
+                          class="contact-field__error"
+                          id="contact-email-error"
+                          role="alert"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="contact-field" for="contact-phone">
+                        <span>Phone</span>
+                        <input
+                          type="tel"
+                          id="contact-phone"
+                          name="phone"
+                          placeholder="+93 (0) 789 123 456"
+                          maxlength="40"
+                          autocomplete="tel"
+                          inputmode="tel"
+                        />
+                        <span
+                          class="contact-field__error"
+                          id="contact-phone-error"
+                          role="alert"
+                        ></span>
                       </label>
                     </div>
                     <div class="col-12">
-                      <label class="contact-field">
-                        <span>Message</span>
+                      <label class="contact-field" for="contact-subject">
+                        <span
+                          >Subject
+                          <span class="contact-field__required" aria-hidden="true"
+                            >*</span
+                          ></span
+                        >
+                        <input
+                          type="text"
+                          id="contact-subject"
+                          name="subject"
+                          placeholder="Software project, ERP system, IT equipment, consulting"
+                          required
+                          maxlength="160"
+                        />
+                        <span
+                          class="contact-field__error"
+                          id="contact-subject-error"
+                          role="alert"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="col-12">
+                      <label class="contact-field" for="contact-message">
+                        <span
+                          >Message
+                          <span class="contact-field__required" aria-hidden="true"
+                            >*</span
+                          ></span
+                        >
                         <textarea
+                          id="contact-message"
+                          name="message"
                           placeholder="Tell us about your organization, current challenge, timeline, and the kind of ICT support you need."
+                          required
+                          maxlength="4000"
                         ></textarea>
+                        <span
+                          class="contact-field__error"
+                          id="contact-message-error"
+                          role="alert"
+                        ></span>
                       </label>
                     </div>
                     <div class="col-12">
                       <div class="contact-form__actions">
-                        <button type="button" class="btn btn-brand">
+                        <button
+                          type="submit"
+                          class="btn btn-brand"
+                          id="contact-form-submit"
+                        >
                           Request a Consultation
                         </button>
                         <a href="services.html" class="btn btn-outline-brand"
