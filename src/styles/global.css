@@ -6214,7 +6214,7 @@ a.neo-cap-card:focus-visible {
   .neo-hero-visual {
     min-height: auto;
     padding: 0.95rem;
-    --neo-small-circle-size: min(100%, 11.2rem);
+    --neo-small-circle-size: 11.2rem;
   }
 
   .neo-hero-visual__ring {
@@ -6229,8 +6229,9 @@ a.neo-cap-card:focus-visible {
   .neo-float-card {
     position: relative;
     max-width: none;
-    width: var(--neo-small-circle-size);
-    height: var(--neo-small-circle-size);
+    width: min(100%, var(--neo-small-circle-size));
+    aspect-ratio: 1;
+    height: auto;
     margin-inline: auto;
   }
 
