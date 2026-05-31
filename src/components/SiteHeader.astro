@@ -3,7 +3,7 @@ import { path, stripBase } from "../utils/withBase";
 
 const base = import.meta.env.BASE_URL;
 const to = (route: string) => path(route, base);
-const logoSrc = `${base}assets/bytewise-logo.svg`;
+const logoSrc = `${base}assets/bytewise-logo.png`;
 const navPath = stripBase(Astro.url.pathname, base);
 const isServicesSection = ["/services", "/business", "/ngo", "/government"].includes(
   navPath

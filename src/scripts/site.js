@@ -14,7 +14,7 @@ function getPreferredTheme() {
 }
 
 const assetBase = import.meta.env.BASE_URL;
-const LOGO_LIGHT = `${assetBase}assets/bytewise-logo.svg`;
+const LOGO_LIGHT = `${assetBase}assets/bytewise-logo.png`;
 const LOGO_DARK = `${assetBase}assets/bytewise-logo-dark.png`;
 
 function resolveAsset(path) {
@@ -38,10 +38,7 @@ function whenIdle(callback) {
 
 function syncBrandLogos(theme) {
   document.querySelectorAll(".brand-mark--image img").forEach((img) => {
-    if (!img.dataset.logoLight) {
-      img.dataset.logoLight = img.getAttribute("src") || LOGO_LIGHT;
-    }
-    img.src = theme === "dark" ? LOGO_DARK : img.dataset.logoLight;
+    img.src = theme === "dark" ? LOGO_DARK : LOGO_LIGHT;
   });
 }
 

@@ -268,6 +268,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -276,7 +277,7 @@ body {
   font-family: "Public Sans", sans-serif;
   color: var(--ink);
   background: var(--arctic-glow-bg);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body::before {
@@ -313,6 +314,8 @@ body::before {
 .site-shell {
   position: relative;
   z-index: 1;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .site-header {
@@ -6098,6 +6101,32 @@ a.neo-cap-card:focus-visible {
 }
 
 @media (max-width: 991px) {
+  .neo-hero .container-xxl {
+    overflow: hidden;
+  }
+
+  .neo-capabilities-showcase {
+    overflow: hidden;
+  }
+
+  .neo-orb--one {
+    right: -2rem;
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .neo-capabilities-showcase__blob--one {
+    left: -3rem;
+    width: 280px;
+    height: 280px;
+  }
+
+  .neo-capabilities-showcase__blob--two {
+    right: -1.5rem;
+    width: 260px;
+    height: 260px;
+  }
+
   .neo-hero {
     padding-top: 1.25rem;
   }
