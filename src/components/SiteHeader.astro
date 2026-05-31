@@ -3,7 +3,7 @@ import { path, stripBase } from "../utils/withBase";
 
 const base = import.meta.env.BASE_URL;
 const to = (route: string) => path(route, base);
-const logoSrc = `${base}assets/bytewise-logo.png`;
+const logoSrc = `${base}assets/bytewise-logo.svg`;
 const navPath = stripBase(Astro.url.pathname, base);
 const isServicesSection = ["/services", "/business", "/ngo", "/government"].includes(
   navPath
@@ -15,7 +15,12 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
     <div class="container-xxl neo-nav-wrap">
       <a href={to("/")} class="brand-link navbar-brand p-0 m-0">
         <span class="brand-mark brand-mark--image">
-          <img src={logoSrc} alt="Bytewise Technologies logo" />
+          <img
+            src={logoSrc}
+            alt="Bytewise Technologies logo"
+            width="118"
+            height="48"
+          />
         </span>
         <span>
           <span class="brand-name">Bytewise Technologies</span>

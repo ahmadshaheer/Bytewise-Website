@@ -1,5 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap");
-
+﻿
 :root {
   color-scheme: light dark;
   --bg: #f4f8f3;
@@ -725,6 +724,17 @@ body::before {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.neo-hero .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.neo-capabilities-showcase,
+.neo-client-grid {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }
 
 .tilt-card {
@@ -2347,7 +2357,12 @@ body::before {
   .reveal,
   .tilt-card,
   .orb,
-  .agency-slider__track {
+  .agency-slider__track,
+  .neo-hero-visual__tech-grid,
+  .neo-hero-visual__tech-line,
+  .neo-hero-visual__tech-pulse,
+  .neo-hero-visual__dial,
+  .neo-hero-visual__beam {
     animation: none;
     transition: none;
   }

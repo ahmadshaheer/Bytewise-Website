@@ -14,8 +14,27 @@ function getPreferredTheme() {
 }
 
 const assetBase = import.meta.env.BASE_URL;
-const LOGO_LIGHT = `${assetBase}assets/bytewise-logo.png`;
+const LOGO_LIGHT = `${assetBase}assets/bytewise-logo.svg`;
 const LOGO_DARK = `${assetBase}assets/bytewise-logo-dark.png`;
+
+function resolveAsset(path) {
+  if (!path || /^https?:\/\//.test(path)) {
+    return path;
+  }
+  if (path.startsWith(assetBase)) {
+    return path;
+  }
+  const normalized = path.startsWith("/") ? path.slice(1) : path;
+  return `${assetBase}${normalized}`;
+}
+
+function whenIdle(callback) {
+  if (typeof requestIdleCallback === "function") {
+    requestIdleCallback(callback, { timeout: 2000 });
+  } else {
+    window.setTimeout(callback, 1);
+  }
+}
 
 function syncBrandLogos(theme) {
   document.querySelectorAll(".brand-mark--image img").forEach((img) => {
@@ -71,7 +90,7 @@ function initializeRotatingImages() {
 
     const sources = (image.dataset.rotateImages || "")
       .split("|")
-      .map((value) => value.trim())
+      .map((value) => resolveAsset(value.trim()))
       .filter(Boolean);
 
     if (sources.length < 2) {
@@ -422,6 +441,7 @@ function initializeContactForm() {
 
 initializeContactForm();
 
+whenIdle(() => {
 if (siteHeader) {
   let headerFrame = null;
 
@@ -622,3 +642,4 @@ sliders.forEach((slider) => {
 });
 
 initializeRotatingImages();
+});

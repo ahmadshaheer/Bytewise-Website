@@ -4,14 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "prepare:vendor": "node scripts/prepare-vendor.mjs",
+    "dev": "node scripts/prepare-vendor.mjs && astro dev",
+    "build": "node scripts/prepare-vendor.mjs && astro build",
     "build:gh-pages": "node scripts/build-gh-pages.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^5.18.2"
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "astro": "^5.18.2",
+    "purgecss": "^8.0.0"
+  },
+  "dependencies": {
+    "@fontsource/plus-jakarta-sans": "^5.2.8",
+    "@fontsource/public-sans": "^5.2.7",
+    "@fontsource/source-serif-4": "^5.2.9",
+    "@fontsource/space-mono": "^5.2.9",
+    "@fontsource/syne": "^5.2.7",
+    "bootstrap": "^5.3.8"
   },
   "engines": {
     "node": ">=22.12.0"

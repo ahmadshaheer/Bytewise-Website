@@ -2,6 +2,7 @@
 import SeoHead from "../components/SeoHead.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
+import "../styles/fonts.css";
 import "../styles/global.css";
 
 interface Props {
@@ -10,21 +11,27 @@ interface Props {
   page: string;
   bodyClass: string;
   showFaqLink?: boolean;
+  lcpPreload?: string;
 }
 
-const { title, description, page, bodyClass, showFaqLink = false } = Astro.props;
+const { title, description, page, bodyClass, showFaqLink = false, lcpPreload } =
+  Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <SeoHead title={title} description={description} />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    {lcpPreload && (
+      <link
+        rel="preload"
+        as="image"
+        href={`${base}${lcpPreload.replace(/^\//, "")}`}
+        fetchpriority="high"
+      />
+    )}
+    <link rel="stylesheet" href={`${base}vendor/bootstrap/bootstrap.min.css`} />
     <script is:inline>
       (function () {
         try {
@@ -38,6 +45,7 @@ const { title, description, page, bodyClass, showFaqLink = false } = Astro.props
         } catch (e) {}
       })();
     </script>
+    <slot name="head" />
   </head>
   <body data-page={page} class={bodyClass}>
     <div class="site-shell">
@@ -47,9 +55,8 @@ const { title, description, page, bodyClass, showFaqLink = false } = Astro.props
     </div>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+      defer
+      src={`${base}vendor/bootstrap/bootstrap.bundle.min.js`}></script>
     <script src="../scripts/site.js"></script>
   </body>
 </html>
