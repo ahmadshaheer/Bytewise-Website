@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyHtml from "../components/LegacyHtml.astro";
 import projectsMain from "../legacy/projects-main.html?raw";
 
 const title = "Bytewise Technologies | Projects";
@@ -12,5 +13,5 @@ const description = "Explore Bytewise Technologies case studies in enterprise so
   page={"projects"}
   bodyClass={"projects-page home-page--neo projects-page--neo"}
 >
-  <div set:html={projectsMain} />
+  <LegacyHtml html={projectsMain} />
 </BaseLayout>

@@ -1,9 +1,14 @@
 ---
+import { path } from "../utils/withBase";
+
 interface Props {
   showFaqLink?: boolean;
 }
 
 const { showFaqLink = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const to = (route: string) => path(route, base);
+const logoSrc = `${base}assets/bytewise-logo.png`;
 ---
 
 <footer class="neo-footer">
@@ -11,10 +16,10 @@ const { showFaqLink = false } = Astro.props;
     <div class="neo-footer__top">
       <div class="row g-5">
         <div class="col-lg-4">
-          <a href="/" class="brand-link text-decoration-none">
+          <a href={to("/")} class="brand-link text-decoration-none">
             <span class="brand-mark brand-mark--image">
               <img
-                src="/assets/bytewise-logo.png"
+                src={logoSrc}
                 alt="Bytewise Technologies logo"
               />
             </span>
@@ -38,9 +43,9 @@ const { showFaqLink = false } = Astro.props;
         <div class="col-sm-6 col-lg-2">
           <h3 class="neo-footer__title">Company</h3>
           <ul class="neo-footer__links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="/projects/">Projects</a></li>
+            <li><a href={to("/")}>Home</a></li>
+            <li><a href={to("/services/")}>Services</a></li>
+            <li><a href={to("/projects/")}>Projects</a></li>
           </ul>
         </div>
 
@@ -48,20 +53,20 @@ const { showFaqLink = false } = Astro.props;
           <h3 class="neo-footer__title">Services</h3>
           <ul class="neo-footer__links">
             <li>
-              <a href="/services/#service-software-development"
+              <a href={to("/services/#service-software-development")}
                 >Software Development</a
               >
             </li>
             <li>
-              <a href="/services/#service-erp-systems">ERP Systems</a>
+              <a href={to("/services/#service-erp-systems")}>ERP Systems</a>
             </li>
             <li>
-              <a href="/services/#service-it-equipment"
+              <a href={to("/services/#service-it-equipment")}
                 >Cloud &amp; Enterprise Infrastructure</a
               >
             </li>
             <li>
-              <a href="/services/#service-it-consulting">IT Consulting</a>
+              <a href={to("/services/#service-it-consulting")}>IT Consulting</a>
             </li>
           </ul>
         </div>
@@ -69,17 +74,17 @@ const { showFaqLink = false } = Astro.props;
         <div class="col-sm-6 col-lg-2">
           <h3 class="neo-footer__title">Industries</h3>
           <ul class="neo-footer__links">
-            <li><a href="/business/">Business</a></li>
-            <li><a href="/ngo/">NGOs</a></li>
-            <li><a href="/government/">Government</a></li>
+            <li><a href={to("/business/")}>Business</a></li>
+            <li><a href={to("/ngo/")}>NGOs</a></li>
+            <li><a href={to("/government/")}>Government</a></li>
           </ul>
         </div>
 
         <div class="col-sm-6 col-lg-2">
           <h3 class="neo-footer__title">Resources</h3>
           <ul class="neo-footer__links">
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href={to("/projects/")}>Projects</a></li>
+            <li><a href={to("/contact/")}>Contact</a></li>
             {showFaqLink && <li><a href="#homeFaq">FAQ</a></li>}
           </ul>
         </div>
@@ -89,7 +94,7 @@ const { showFaqLink = false } = Astro.props;
     <div class="neo-footer__bottom">
       <p>&copy; 2026 Bytewise Technologies. All rights reserved.</p>
       <div class="neo-footer__bottom-links">
-        <a href="/contact/">Contact</a>
+        <a href={to("/contact/")}>Contact</a>
       </div>
     </div>
   </div>

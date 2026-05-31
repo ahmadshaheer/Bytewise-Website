@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:gh-pages": "node scripts/build-gh-pages.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

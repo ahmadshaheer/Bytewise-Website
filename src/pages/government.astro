@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyHtml from "../components/LegacyHtml.astro";
 import governmentMain from "../legacy/government-main.html?raw";
 
 const title = "Bytewise Technologies | Government Solutions";
@@ -12,5 +13,5 @@ const description = "Secure ICT solutions for government institutions: document 
   page={"services"}
   bodyClass={"government-page home-page--neo government-page--neo"}
 >
-  <div set:html={governmentMain} />
+  <LegacyHtml html={governmentMain} />
 </BaseLayout>

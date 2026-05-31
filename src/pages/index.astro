@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyHtml from "../components/LegacyHtml.astro";
 import indexMain from "../legacy/index-main.html?raw";
 
 const title = "Bytewise Technologies | Home";
@@ -13,5 +14,5 @@ const description = "Bytewise Technologies provides software development, ERP sy
   bodyClass={"home-page home-page--neo"}
   showFaqLink
 >
-  <div set:html={indexMain} />
+  <LegacyHtml html={indexMain} />
 </BaseLayout>

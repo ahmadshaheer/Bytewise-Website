@@ -1,5 +1,10 @@
 ---
-const navPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+import { path, stripBase } from "../utils/withBase";
+
+const base = import.meta.env.BASE_URL;
+const to = (route: string) => path(route, base);
+const logoSrc = `${base}assets/bytewise-logo.png`;
+const navPath = stripBase(Astro.url.pathname, base);
 const isServicesSection = ["/services", "/business", "/ngo", "/government"].includes(
   navPath
 );
@@ -8,9 +13,9 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
 <header class="site-header sticky-top">
   <nav class="navbar navbar-expand-xl">
     <div class="container-xxl neo-nav-wrap">
-      <a href="/" class="brand-link navbar-brand p-0 m-0">
+      <a href={to("/")} class="brand-link navbar-brand p-0 m-0">
         <span class="brand-mark brand-mark--image">
-          <img src="/assets/bytewise-logo.png" alt="Bytewise Technologies logo" />
+          <img src={logoSrc} alt="Bytewise Technologies logo" />
         </span>
         <span>
           <span class="brand-name">Bytewise Technologies</span>
@@ -37,13 +42,13 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
           <li class="nav-item">
             <a
               class:list={["nav-link", { active: navPath === "/" }]}
-              href="/">Home</a
+              href={to("/")}>Home</a
             >
           </li>
           <li class="nav-item dropdown">
             <a
               class:list={["nav-link dropdown-toggle", { active: isServicesSection }]}
-              href="/services/"
+              href={to("/services/")}
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -52,7 +57,7 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="/services/">All Services</a>
+                <a class="dropdown-item" href={to("/services/")}>All Services</a>
               </li>
               <li><hr class="dropdown-divider" /></li>
               <li>
@@ -61,13 +66,13 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
                     "dropdown-item",
                     { active: navPath === "/business" },
                   ]}
-                  href="/business/">Business</a
+                  href={to("/business/")}>Business</a
                 >
               </li>
               <li>
                 <a
                   class:list={["dropdown-item", { active: navPath === "/ngo" }]}
-                  href="/ngo/">NGOs</a
+                  href={to("/ngo/")}>NGOs</a
                 >
               </li>
               <li>
@@ -76,7 +81,7 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
                     "dropdown-item",
                     { active: navPath === "/government" },
                   ]}
-                  href="/government/">Government</a
+                  href={to("/government/")}>Government</a
                 >
               </li>
             </ul>
@@ -84,7 +89,7 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
           <li class="nav-item">
             <a
               class:list={["nav-link", { active: navPath === "/projects" }]}
-              href="/projects/">Projects</a
+              href={to("/projects/")}>Projects</a
             >
           </li>
         </ul>
@@ -120,13 +125,13 @@ const isServicesSection = ["/services", "/business", "/ngo", "/government"].incl
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
-          <a href="/contact/" class="btn btn-brand neo-header-cta">Contact Us</a>
+          <a href={to("/contact/")} class="btn btn-brand neo-header-cta">Contact Us</a>
         </div>
       </div>
     </div>
   </nav>
 </header>
 
-<a href="/contact/" class="neo-floating-contact d-none d-lg-inline-flex"
+<a href={to("/contact/")} class="neo-floating-contact d-none d-lg-inline-flex"
   >Contact Us</a
 >

@@ -13,8 +13,9 @@ function getPreferredTheme() {
   return getStoredTheme() ?? getSystemTheme();
 }
 
-const LOGO_LIGHT = "/assets/bytewise-logo.png";
-const LOGO_DARK = "/assets/bytewise-logo-dark.png";
+const assetBase = import.meta.env.BASE_URL;
+const LOGO_LIGHT = `${assetBase}assets/bytewise-logo.png`;
+const LOGO_DARK = `${assetBase}assets/bytewise-logo-dark.png`;
 
 function syncBrandLogos(theme) {
   document.querySelectorAll(".brand-mark--image img").forEach((img) => {

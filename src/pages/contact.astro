@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyHtml from "../components/LegacyHtml.astro";
 import contactMain from "../legacy/contact-main.html?raw";
 
 const title = "Bytewise Technologies | Contact";
@@ -12,5 +13,5 @@ const description = "Contact Bytewise Technologies for software development, ERP
   page={"contact"}
   bodyClass={"contact-page home-page--neo contact-page--neo"}
 >
-  <div set:html={contactMain} />
+  <LegacyHtml html={contactMain} />
 </BaseLayout>

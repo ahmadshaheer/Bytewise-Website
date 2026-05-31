@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyHtml from "../components/LegacyHtml.astro";
 import servicesMain from "../legacy/services-main.html?raw";
 
 const title = "Bytewise Technologies | Services";
@@ -12,5 +13,5 @@ const description = "Explore Bytewise Technologies services in software developm
   page={"services"}
   bodyClass={"services-page home-page--neo services-page--neo"}
 >
-  <div set:html={servicesMain} />
+  <LegacyHtml html={servicesMain} />
 </BaseLayout>

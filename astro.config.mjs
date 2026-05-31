@@ -1,11 +1,15 @@
 import { defineConfig } from "astro/config";
 
-// Set your production URL before deploy (required for sitemap/canonicals).
+// Production (bytewiseict.com) — defaults below.
+// GitHub Pages — set in .github/workflows/deploy.yml:
+//   SITE_URL=https://ahmadshaheer.github.io  BASE_PATH=/Bytewise-Website/
 const site = process.env.SITE_URL ?? "https://bytewiseict.com";
+const base = process.env.BASE_PATH ?? "/";
 
 /** @type {import('astro').AstroUserConfig} */
 export default defineConfig({
   site,
+  base,
   output: "static",
   trailingSlash: "always",
   build: {
