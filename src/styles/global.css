@@ -731,7 +731,6 @@ body::before {
   transform: none;
 }
 
-.neo-capabilities-showcase,
 .neo-client-grid {
   content-visibility: auto;
   contain-intrinsic-size: auto 500px;
@@ -4441,6 +4440,7 @@ body::before {
 
 #features.neo-section {
   padding-top: 0;
+  content-visibility: visible;
 }
 
 .neo-section__heading {
@@ -4482,9 +4482,10 @@ body::before {
     linear-gradient(90deg, rgba(21, 145, 84, 0.055) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(
-    ellipse 80% 60% at 50% 50%,
-    black 40%,
-    transparent 100%
+    ellipse 100% 85% at 50% 45%,
+    black 12%,
+    rgba(0, 0, 0, 0.35) 52%,
+    transparent 88%
   );
   pointer-events: none;
 }
@@ -4492,8 +4493,8 @@ body::before {
 .neo-capabilities-showcase__blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.48;
+  filter: blur(72px);
+  opacity: 0.42;
   pointer-events: none;
   animation: capabilityBlobFloat 16s ease-in-out infinite;
 }
@@ -4505,8 +4506,9 @@ body::before {
   height: 360px;
   background: radial-gradient(
     circle,
-    rgba(155, 245, 59, 0.55),
-    rgba(214, 255, 182, 0.16)
+    rgba(155, 245, 59, 0.42) 0%,
+    rgba(155, 245, 59, 0.16) 42%,
+    transparent 72%
   );
 }
 
@@ -4517,8 +4519,9 @@ body::before {
   height: 340px;
   background: radial-gradient(
     circle,
-    rgba(103, 239, 87, 0.5),
-    rgba(210, 255, 210, 0.16)
+    rgba(103, 239, 87, 0.38) 0%,
+    rgba(103, 239, 87, 0.14) 40%,
+    transparent 70%
   );
   animation-delay: -4s;
 }
@@ -4530,8 +4533,9 @@ body::before {
   height: 180px;
   background: radial-gradient(
     circle,
-    rgba(21, 145, 84, 0.26),
-    rgba(220, 255, 228, 0.12)
+    rgba(21, 145, 84, 0.22) 0%,
+    rgba(21, 145, 84, 0.08) 45%,
+    transparent 68%
   );
   animation-delay: -2s;
 }
