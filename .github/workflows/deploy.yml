@@ -26,7 +26,6 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          # GitHub Pages project site; production (bytewiseict.com) uses astro.config defaults.
           SITE_URL: https://ahmadshaheer.github.io
           BASE_PATH: /Bytewise-Website/
       - uses: actions/upload-pages-artifact@v3
