@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import contactMain from "../legacy/contact-main.html?raw";
+
+const title = "Bytewise Technologies | Contact";
+const description = "Contact Bytewise Technologies for software development, ERP systems, cloud and enterprise infrastructure, or strategic IT consulting.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  page={"contact"}
+  bodyClass={"contact-page home-page--neo contact-page--neo"}
+>
+  <div set:html={contactMain} />
+</BaseLayout>

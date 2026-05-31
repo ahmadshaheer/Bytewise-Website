@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import governmentMain from "../legacy/government-main.html?raw";
+
+const title = "Bytewise Technologies | Government Solutions";
+const description = "Secure ICT solutions for government institutions: document management, contract and procurement systems, and HR and payroll ERPs.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  page={"services"}
+  bodyClass={"government-page home-page--neo government-page--neo"}
+>
+  <div set:html={governmentMain} />
+</BaseLayout>

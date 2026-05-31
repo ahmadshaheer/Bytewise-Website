@@ -1,0 +1,16 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="44" fill="#EEF3F8"/>
+  <rect x="74" y="74" width="1052" height="752" rx="36" fill="white"/>
+  <rect x="138" y="146" width="924" height="608" rx="32" fill="#F7FAFD"/>
+  <rect x="164" y="180" width="322" height="520" rx="28" fill="#D7E2EE"/>
+  <rect x="530" y="180" width="506" height="520" rx="28" fill="white"/>
+  <circle cx="326" cy="302" r="92" fill="#1B2A41"/>
+  <circle cx="262" cy="416" r="62" fill="#F0C14B"/>
+  <circle cx="390" cy="416" r="62" fill="#0F766E"/>
+  <rect x="590" y="244" width="278" height="28" rx="14" fill="#1B2A41"/>
+  <rect x="590" y="304" width="380" height="20" rx="10" fill="#7C8DA3"/>
+  <rect x="590" y="346" width="340" height="20" rx="10" fill="#7C8DA3"/>
+  <rect x="590" y="388" width="292" height="20" rx="10" fill="#7C8DA3"/>
+  <path d="M630 560C684 494 744 460 810 460C870 460 928 492 984 556" stroke="#1D3565" stroke-width="32" stroke-linecap="round"/>
+  <path d="M736 580L818 642L902 546" stroke="#0F766E" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

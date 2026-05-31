@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ngoMain from "../legacy/ngo-main.html?raw";
+
+const title = "Bytewise Technologies | NGO Solutions";
+const description = "ICT solutions for NGOs: M&amp;E dashboards, grant and fund management ERPs, and field connectivity for remote program teams.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  page={"services"}
+  bodyClass={"ngo-page home-page--neo ngo-page--neo"}
+>
+  <div set:html={ngoMain} />
+</BaseLayout>

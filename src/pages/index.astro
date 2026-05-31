@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import indexMain from "../legacy/index-main.html?raw";
+
+const title = "Bytewise Technologies | Home";
+const description = "Bytewise Technologies provides software development, ERP systems, cloud and enterprise infrastructure, and strategic IT consulting for corporations, NGOs, and government institutions.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  page={"home"}
+  bodyClass={"home-page home-page--neo"}
+  showFaqLink
+>
+  <div set:html={indexMain} />
+</BaseLayout>

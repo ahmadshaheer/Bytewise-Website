@@ -1,0 +1,96 @@
+---
+interface Props {
+  showFaqLink?: boolean;
+}
+
+const { showFaqLink = false } = Astro.props;
+---
+
+<footer class="neo-footer">
+  <div class="container-xxl">
+    <div class="neo-footer__top">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="/" class="brand-link text-decoration-none">
+            <span class="brand-mark brand-mark--image">
+              <img
+                src="/assets/bytewise-logo.png"
+                alt="Bytewise Technologies logo"
+              />
+            </span>
+            <span>
+              <span class="brand-name">Bytewise Technologies</span>
+              <span class="brand-tagline d-block"
+                >Software, ERP, Infrastructure &amp; IT Consulting</span
+              >
+            </span>
+          </a>
+          <p class="neo-footer__intro">
+            Bytewise Technologies supports organizations with custom software
+            development, ERP systems, cloud and enterprise infrastructure, and
+            strategic consulting that turns ideas into practical systems.
+          </p>
+          <div class="neo-footer__contact">
+            <a href="mailto:info@bytewiseict.com">info@bytewiseict.com</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="neo-footer__title">Company</h3>
+          <ul class="neo-footer__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/projects/">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="neo-footer__title">Services</h3>
+          <ul class="neo-footer__links">
+            <li>
+              <a href="/services/#service-software-development"
+                >Software Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/#service-erp-systems">ERP Systems</a>
+            </li>
+            <li>
+              <a href="/services/#service-it-equipment"
+                >Cloud &amp; Enterprise Infrastructure</a
+              >
+            </li>
+            <li>
+              <a href="/services/#service-it-consulting">IT Consulting</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="neo-footer__title">Industries</h3>
+          <ul class="neo-footer__links">
+            <li><a href="/business/">Business</a></li>
+            <li><a href="/ngo/">NGOs</a></li>
+            <li><a href="/government/">Government</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="neo-footer__title">Resources</h3>
+          <ul class="neo-footer__links">
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            {showFaqLink && <li><a href="#homeFaq">FAQ</a></li>}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="neo-footer__bottom">
+      <p>&copy; 2026 Bytewise Technologies. All rights reserved.</p>
+      <div class="neo-footer__bottom-links">
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

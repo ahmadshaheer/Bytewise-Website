@@ -13,8 +13,8 @@ function getPreferredTheme() {
   return getStoredTheme() ?? getSystemTheme();
 }
 
-const LOGO_LIGHT = "assets/bytewise-logo.png";
-const LOGO_DARK = "assets/bytewise-logo-dark.png";
+const LOGO_LIGHT = "/assets/bytewise-logo.png";
+const LOGO_DARK = "/assets/bytewise-logo-dark.png";
 
 function syncBrandLogos(theme) {
   document.querySelectorAll(".brand-mark--image img").forEach((img) => {
@@ -55,8 +55,6 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (ev
   }
 });
 
-const currentPage = document.body.dataset.page;
-const navLinks = document.querySelectorAll(".nav-link");
 const revealItems = document.querySelectorAll(".reveal");
 const tiltCards = document.querySelectorAll(".tilt-card");
 const sliders = document.querySelectorAll("[data-slider]");
@@ -151,38 +149,6 @@ function initializeRotatingImages() {
     }, 5200);
   });
 }
-
-const currentPath = window.location.pathname.split("/").pop() || "index.html";
-const servicesPages = new Set([
-  "services.html",
-  "business.html",
-  "ngo.html",
-  "government.html"
-]);
-
-navLinks.forEach((link) => {
-  const href = link.getAttribute("href");
-  const isActive =
-    (currentPage === "home" && href === "index.html") ||
-    (servicesPages.has(currentPath) && href === "services.html") ||
-    (currentPage === "projects" && href === "projects.html") ||
-    (currentPage === "contact" && href === "contact.html");
-
-  link.classList.toggle("active", isActive);
-});
-
-document.querySelectorAll(".dropdown-item").forEach((link) => {
-  const href = link.getAttribute("href");
-  const isActive = href === currentPath;
-
-  link.classList.toggle("active", isActive);
-
-  if (isActive) {
-    link.setAttribute("aria-current", "page");
-  } else {
-    link.removeAttribute("aria-current");
-  }
-});
 
 const CONTACT_EMAIL = "info@bytewiseict.com";
 

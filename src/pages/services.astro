@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import servicesMain from "../legacy/services-main.html?raw";
+
+const title = "Bytewise Technologies | Services";
+const description = "Explore Bytewise Technologies services in software development, ERP systems, cloud and enterprise infrastructure, and strategic IT consulting.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  page={"services"}
+  bodyClass={"services-page home-page--neo services-page--neo"}
+>
+  <div set:html={servicesMain} />
+</BaseLayout>
